@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main(){
+	char data[10][100] = {"2117051024John Wilken Christoper Nainggolan",
+						  "2117051009Nathania Santa Nigel",
+						  "2117051048Dhiaurrahman Raziq Ramadhan",
+						  "2117051025Stefanus Ferry S",
+						  "2117051088Fatimah Abbiyi K",
+						  "2117051095Jihan Haya M",
+						  "2117051057Reza Nur Ramadhan",
+						  "2117051070Muhammad Zidan Pasya"};
+	char* endptr;
+	
+	for (int i = 0 ; i < 8 ; i++){
+		long value = strtod(data[i], &endptr);
+		cout << "Nama : " << endptr << endl;
+		cout << "NPM : " << value << endl;
+		cout << endl;
+	}
+}
